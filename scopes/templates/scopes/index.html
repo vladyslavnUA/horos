@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="jumbotron" style="align-content: center;">
+        <h1>Scorpio Daily Horoscope</h1>
+           <a href="/" class="btn btn-danger">Refresh Horoscopes</a>
+        </form>
+    </div>
+    <div class="container">
+            Today's Date: <h3 id="date"></h3>
+        <script>
+            n =  new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+        </script>
+        <br>
+        <div class="row">
+            <div class="col-6">
+                <h3 class="text-center"> Astroyogi</h3>
+                <br>
+                {% for c in yogi_scopes %}
+                <h5> -  {{c}} </h5>
+                <h6 class="right">from <a href="https://www.astroyogi.com/horoscopes/daily/scorpio-free-horoscope.aspx" target="_blank">astroyogi.com</a></h6>
+                <hr>
+                {% endfor %}
+                <br>
+            </div>
+            <div class="col-6">
+                <h3 class="text-center"> Elle</h3>
+                <br>
+                {% for b in elle_scopes %}
+                <h5> -  {{b}} </h5>
+                <h6 class="right">from <a href="https://www.elle.com/horoscopes/daily/a104/scorpio-daily-horoscope/" target="_blank">elle.com</a></h6>
+                <hr>
+                {% endfor %}
+                <br>
+            </div>
+            <div class="col-6">
+                <h3 class="text-center"> DailyHoroscope</h3>
+                <br>
+                {% for e in daily_scopes %}
+                <h5> -  {{e}} </h5>
+                <h6 class="right">from <a href="https://www.dailyhoroscope.com/horoscopes/daily/scorpio?full=true" target="_blank">dailyhoroscope.com</a></h6>
+                <hr>
+                {% endfor %}
+                <br>
+            </div>
+            <div class="col-6">
+                <h3 class="text-center"> Astrology</h3>
+                <br>
+                {% for n in ast_scopes %}
+                <h5> -  {{n}} </h5>
+                <h6 class="right">from <a href="https://www.astrology.com/horoscope/daily/scorpio.html" target="_blank">astrology.com</a></h6>
+                <hr>
+                {% endfor %}
+                <br>
+            </div>
+            <div class="col-6">
+                <h3 class="text-center"> Astrostyle</h3>
+                <br>
+                {% for d in astro_scopes %}
+                <h5> -  {{d}} </h5>
+                <h6 class="right">from <a href="https://astrostyle.com/horoscopes/daily/scorpio/" target="_blank">astrostyle.com</a></h6>
+                <hr>
+                {% endfor %}
+                <br>
+            </div>
+            <div class="col-6">
+                <h3 class="text-center"> Cafestrology</h3>
+                <br>
+                <h5> - Unable to parse data from website. Direct link: <a href="https://cafeastrology.com/scorpiodailyhoroscope.html" target="_blank">cafestrology.com</a></h5>
+                <hr>
+                <br>
+            </div>
+        </div>
+    <style>
+    .right {
+        text-align: right;
+    }
+    </style>
+ 
+</div>
+    <script
+src="http://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
